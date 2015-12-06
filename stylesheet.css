@@ -1,0 +1,62 @@
+body {
+  background-color: #42b287;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+button {
+  background-color: #b24630;
+  color: #ff8f78;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 30px;
+  border: 2px solid;
+}
+
+button:hover {
+  background-color: #b24630;
+  color: #ff8f78;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 31px;
+  border: 4px solid;
+}
+
+.init {
+  margin: auto;
+  text-align: center;
+}
+
+.ques {
+  font-size: 24px;
+  font-family: Verdana;
+  margin: auto;
+  text-align: center;
+}
+
+#resp {
+  font-size: 50px;
+  font-family: Verdana;
+  margin: auto;
+  text-align: center;
+}
+
+form {
+  font-family: Verdana;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
