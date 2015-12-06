@@ -12,8 +12,8 @@ for (var i = 0; i < notes.length; i++) {
 notesFull.splice(5,2);
 notesFull.splice(12,2);
 
-var intervals = ["Unison", "minor2", "Major2", "minor3", "Major3", "Perfect4", "Tritone", "Perfect5", "minor6",
-                             "Major6", "minor7", "Major7"];
+var intervals = ["U", "m2", "M2", "m3", "M3", "P4", "T", "P5", "m6",
+                             "M6", "m7", "M7"];
 
 //Gives set of 2 notes
 function game() {
@@ -28,7 +28,7 @@ function game() {
   if ((firNote[1] === "b") && (secNote[1] === "#")) {
     secNote = notesFull[setIntTwo + 1];
   }
-  if ((firNote[1] === "b") && (secNote[1] === "#")) {
+  else if ((firNote[1] === "#") && (secNote[1] === "b")) {
     secNote = notesFull[setIntTwo - 1];
   }
   var ques = "What is the interval going <strong>UP</strong> from " + firNote + " to " + secNote + "?";
@@ -36,15 +36,13 @@ function game() {
 }
 
 //Checks if usrInp is correct
-function check() {
-  var resp;
-  var x = document.getElementById("usrInp").value;
-  if (x === intervals[oneToTwo]) {
-    resp = "Correct!";
-  } else if (x === "null") {
-    resp = "Please input an interval";
-  } else {
-    resp = "Sorry! Try again";
+function check(buttonElement) {
+  var corInt = intervals[oneToTwo];
+  var buttonClicked = buttonElement.id;
+  if (buttonClicked === corInt) {
+    document.getElementById('resp').innerHTML = 'Correct!';
   }
-  document.getElementById("resp").innerHTML = resp;
+  else {
+    document.getElementById('resp').innerHTML = 'Sorry try again';
+  }
 }
