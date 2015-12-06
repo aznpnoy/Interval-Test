@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Check Notes</title>
+      <script type="text/javascript" src="script.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+      <script src="http://malsup.github.com/jquery.form.js"></script>
+      <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    </head>
+    
+    <body>
+      <div class="outer">
+      <div class="middle">
+        <div class="init">
+          <button onclick="game()">Click here for test</button><br>
+        </div>
+        <div class="ques">
+          <p id="ques"></p>
+        </div>
+        
+        <form name="myForm" action="" method="get">
+          Type Answer Here: <br>
+          <input type="text" name="inputBox" value=""><p>
+          <input type="button" name="button" value="click" onClick="check(this.form)">
+        </form>
+        <div id="resp"></div>
+      </div>
+      </div>
+    </body>
+</html>
